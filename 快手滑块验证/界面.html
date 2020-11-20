@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover" />
+  <link rel="shortcut icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" type="image/x-icon" />
+  <title>captcha</title>
+  <script>(function a() {
+                var docEle = document.documentElement;
+                var width = Math.min(docEle.clientWidth, 450);
+                var orig = width / 7.5;
+                docEle.style.fontSize = orig + 'px';
+                // 修正系统字体调整造成的布局问题
+                var real = parseFloat(window.getComputedStyle(docEle).fontSize);
+                if (orig !== real) {
+                    var modified = orig * (orig / real);
+                    docEle.style.fontSize = modified + 'px';
+                }
+                window.addEventListener('resize', a);
+            })();</script>
+  <link href="//ali.static.yximgs.com/static/captcha/css/iframe/index.eef16371.css" rel="stylesheet" />
+ </head>
+ <body ontouchstart="">
+  <div id="app"></div>
+  <script crossorigin="anonymous" data-page-perf-rate="0.3" data-resource-perf-rate="0.01" src="//ali.static.yximgs.com/udata/pkg/fe/ks-log.2.0.0-alpha-190912.js"></script>
+  <script src="//ali.static.yximgs.com/static/captcha/js/chunk-vendors.e3606303.js" crossorigin="anonymous"></script>
+  <script src="//ali.static.yximgs.com/static/captcha/js/iframe/index.edb08968.js" crossorigin="anonymous"></script>
+ </body>
+</html>

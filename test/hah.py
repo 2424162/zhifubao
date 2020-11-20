@@ -1,0 +1,9 @@
+data1 = {'kuaishou.api_st': 'Cg9rdWFpc2hvdS5hcGkuc3QSsAHDmpDh9LR8foALJVrcFFSkuv7VE2vgdUwU2VRtbL2bZQOW_4M-0hnXzS5UR9OPJMbtvzEq0jXjdgmo7Idyd7myzkvg8uDQ5EGR5tXTPHRQuSZlgmaCzQgwCoz5c0mBviTtP_Wo4Db2bsHczq6WdqOW4K6bNhGH5tJcKmZ0qeASPwT2qGwR4E8xy2yacVVhDdbHtHeIVIP_vUoWv_GoSFBj8aq9dMEm2ByKWF8IqxwcIBoS2oqXd8G5Su2uDhjb4uqqWetrIiCNJsGkn40rmNRtspQincmBb9dXwXbqBlor32XsaU7DZigFMAE', 'token': '63bc22c9c89241668d91f8ce46800b4c-1942009504', 'client_key': '3c2cd3f3', 'os': 'android', 'secret': 'FftJhMzYMQpPT/vrzlgykixg2GqaUEPcV5uoDqeHiYXuKr7YmFUI5j5lthSeDr4bjclo4v7PVIt0Vy1nzAQKuUaL7y5d89SjCcO3eaugwuKd0sWm7+nyRZnGBP0bU6wSAwE7tT+twqYA/y9nh867aYnxdP8MBzyLcPVu13tXvAWX6ugXLzotds8hWQ1YqaAEjFTk5wG6NggUGMWPzM0gu9SkWyW5Tni/DZ9rL+iRrOH9khI8Qjkg5o81COOB261UOnVhbkgoSUs1HgX+BvkxWCMLqH+fXP75r+PGNuGy84ir2sbzSHod6i2G+eQ/Kq7Dz2RKmP00p5OD5xQfVAR1JQ==', 'raw': '1599101098761', 'type': '27', 'mobileCountryCode': '+86', 'mobile': '18202697225', 'code': '063505'}
+data2 = {'loginType': 51, 'smsCode': '063505', 'loginToken': 'ChxrdWFpc2hvdS5tdWx0aS51c2VyLmxvZ2luLmF0EpABs26NEDSIKEDe50wMapEx9y0BV3sSv_wzFMppcO5JaOC4LKyntY3RuP-7GSu2H1F_DM0c9PIK3sbUyUrNwHgxDk5wwRh3SZVV8lB2UKY9w7ZfxsVw7r3RMvhGMXAbFVnNPjbz92sG4eVMwdA6MZooACDUtMWOYpf1JkEwdeeA2JNFRytvAbMUec1aHqNlfo1yGhKGUVjIF83ZWfolHcPr9n1h9XUiIN1FsplANHB2diq0jf1c93gh3B7sa2kmRa-yihSyiFVIKAUwAQ', 'userId': '1942009504', 'giveUpAccountCancel': 'false', 'raw': '1599101113398', 'secret': 'kot+b9DmI8dUebDh4utqdbDr+wWLZt+Y7X8BIxVbgCkDcGpqw1Af669dE7PPb35yenhq7p4EnXZLlMD1HnHMGZbLFyMZiwNjsD29hW+qhLgMMUv0cFu50auJVQEI+0ZS2LQruJagOKnjqTV6HPQGFANDb+Vfrslt6Czz2YS/kB4L4s2HRajAc/ZdsFmh8qglFwKGoWfEFYrqqDLSYr1OdzapV+VifQ2j8K4Q/MobT/E0nUOrbj/IYN5PmY4Xfl0qXhM9uwQ3i6VbUtv5u1kh9QIgNpwVqX0Z3ifUjyTXi66CnanyXjzWU/XXPVzN050HD1FZVUyRhXdA09anE5Mn5Q=='}
+ff= data2.update(data1)
+del data2['smsCode']
+print(data2)
+
+
+for i in range(0,1):
+    print(i)

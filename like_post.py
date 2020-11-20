@@ -1,0 +1,73 @@
+import requests
+
+url =  "https://apissl.ksapisrv.com/rest/photo/like?mod=samsung%28SM-N960F%29&lon=108.567809&country_code=CN&kpn=KUAISHOU&oc=GENERIC&egid=DFP842F39F36A6997F407E6EC011E54523D887E676A7BF550BB39A00F8E6EB81&hotfix_ver=&sh=1600&appver=6.9.2.11245&max_memory=128&isp=CMCC&browseType=1&kpf=ANDROID_PHONE&did=ANDROID_4c1d96d144ad9668&net=WIFI&app=0&ud=1222084156&c=GENERIC&sys=ANDROID_5.1.1&sw=900&ftt=&language=zh-cn&iuid=&lat=30.998763&did_gt=1587967311124&ver=6.9"
+
+url =  "https://apissl.ksapisrv.com/rest/photo/like?mod=samsung%28SM-N960F%29&lon=108.567809&country_code=CN&kpn=KUAISHOU&oc=GENERIC&egid=DFP842F39F36A6997F407E6EC011E54523D887E676A7BF550BB39A00F8E6EB81&hotfix_ver=&sh=1600&appver=6.9.2.11245&max_memory=128&isp=CMCC&browseType=1&kpf=ANDROID_PHONE&did=ANDROID_4c1d96d144ad9668&net=WIFI&app=0&ud=1222084156&c=GENERIC&sys=ANDROID_5.1.1&sw=900&ftt=&language=zh-cn&iuid=&lat=30.998763&did_gt=1587967311124&ver=6.9"
+
+url=   "https://api3.ksapisrv.com/rest/photo/like?mod=samsung%28SM-N960F%29&lon=108.567809&country_code=CN&kpn=KUAISHOU&oc=GENERIC&egid=DFP16863507F58375C1E2BB942E29871964A9F84EC7038A5835B26F0E00B6DE3&hotfix_ver=&sh=1600&appver=6.9.2.11245&max_memory=128&isp=CMCC&browseType=1&kpf=ANDROID_PHONE&did=ANDROID_4c1d96d144ad9668&net=WIFI&app=0&ud=1222084156&c=GENERIC&sys=ANDROID_5.1.1&sw=900&ftt=&language=zh-cn&iuid=&lat=30.998763&did_gt=1587967311124&ver=6.9"
+#data = "user_id=1459796743&photo_id=5199968747849175101&cancel=0&referer=ks%3A%2F%2Fphoto%2F1459796743%2F5199968747849175101%2F3%2F1_i%2F2000064359143900481_l0%23like&exp_tag0=&exp_tag=1_i%2F2000064359143900481_l0&serverExpTag=feed_photo%7C5199968747849175101%7C1459796743%7C1_i%2F2000064359143900481_l0&expTagList=CkkKRGZlZWRfcGhvdG98NTE5OTk2ODc0Nzg0OTE3NTEwMXwxNDU5Nzk2NzQzfDFfaS8yMDAwMDY0MzU5MTQzOTAwNDgxX2wwEgEx&photoinfo=_%2F_&__NStokensig=4f3969ca5f498b474be87f39bc0e6dcff7e3d20afe2b18a9bed578090382c274&kuaishou.api_st=Cg9rdWFpc2hvdS5hcGkuc3QSoAGRGiDLs2ObtxL4aBSmC5xsESvNlLA4d8cwctvhpmkshRmUxakngsnjN9HJTcY41no-4BxoEpaKaHrejwiml1FBgwFAwank35y96WM49hCaFq0Nl2jiIlCJZMmJ014aMx4O59cNnMcY1_1X1hYJsgZF3wJwTEnc6BLxKcqcrrf6HHL3QiWQkT5EIBrAuvIDyy8udVSEiHrbMx5Gqhol0zpFGhJrNN-fL8lNH4AKLNFPdkh-L7kiIN6YoIUApaUb8l0NETr3rJ0n4Eveat783CsuFxo1Df6sKAUwAQ&token=b5b832d5addd48c5889ee2b35d91a13d-1222084156&client_key=3c2cd3f3&os=android&sig=03d4dde570a742a43f06c09718511b25"
+data= {
+'user_id':	'100928655',
+'photo_id':	'5194339250952954069',
+'cancel':	'0',
+'referer'	:'ks://photo/100928655/5194339250952954069/3/1_i/2000066277728605153_p0#like',
+'exp_tag0'	:'',
+'exp_tag':	'1_i/2000066277728605153_p0',
+'serverExpTag':	'feed_photo|5194339250952954069|100928655|1_i/2000066277728605153_p0',
+'expTagList':	'CkgKQ2ZlZWRfcGhvdG98NTE5NDMzOTI1MDk1Mjk1NDA2OXwxMDA5Mjg2NTV8MV9pLzIwMDAwNjYyNzc3Mjg2MDUxNTNfcDASATE=',
+'photoinfo':	'100928655/_',
+#'__NS_sig3'	:'2200119469c6a5f616510b6d8fa1cdd6b3df9a0354',
+
+'__NStokensig':	'5f7595d97e472e7cdcdc9f29eaf5f8254777f6475f8e6f577301fe636934ea92',
+'kuaishou.api_st':	'Cg9rdWFpc2hvdS5hcGkuc3QSoAHkJlS_ajLHzGDzSJPxFhQuzQADae96bRnP4uDzr__YYLvjhUhagLtUUWCHlwBeDHWEzTQH00CdeTQLal6PJIWRcDXOoxs3lMZePlE6EYLdKNJMM0HHBf6kSRNuQ3I0FrvR3zbLU24GVWKf2fNFjqL2g-OdFOZ2MBp7xyk2L0Mz68QPo5dc16Tsweh6Mg0c8ZUJpVUax3Z_JK1q2GdRYHG_GhJPQv6ZTt1N5roF-otIWYG6ZJsiIPILxRzEZTkasZ6Mzmi9hDXDVjBd-B2zDUMm8iU25cEVKAUwAQ',
+'token':	'b5b832d5addd48c5889ee2b35d91a13d-1222084156',
+'client_key':	'3c2cd3f3',
+'os':	'android',
+'sig':	'769baca21759f8c44d571ce88ac2684e'
+
+}
+data1= {
+'user_id':	'743769317',
+'photo_id':	'5232901323764093444',
+'cancel':	'0',
+'referer'	:'ks://photo/743769317/5232901323764093444/3/1_i/2000066439039133809_h492#like',
+'exp_tag0'	:'',
+'exp_tag':	'1_i/2000066439039133809_h492',
+'serverExpTag':	'feed_photo|5232901323764093444|743769317|1_i/2000066439039133809_h492',
+'expTagList':	'CkoKRWZlZWRfcGhvdG98NTIzMjkwMTMyMzc2NDA5MzQ0NHw3NDM3NjkzMTd8MV9pLzIwMDAwNjY0MzkwMzkxMzM4MDlfaDQ5MhIBMQ==',
+'photoinfo':	'_/_',
+#'__NS_sig3'	:'2200202409c64b0b75b5fd3eebd616fa6dc8ece66b',
+
+'__NStokensig':	'775555ab4ccdfe5c43a0b41a14c0625a5ecfdf129db6bf9b3608fa3223a9ee0c',
+'kuaishou.api_st':	'Cg9rdWFpc2hvdS5hcGkuc3QSoAHkJlS_ajLHzGDzSJPxFhQuzQADae96bRnP4uDzr__YYLvjhUhagLtUUWCHlwBeDHWEzTQH00CdeTQLal6PJIWRcDXOoxs3lMZePlE6EYLdKNJMM0HHBf6kSRNuQ3I0FrvR3zbLU24GVWKf2fNFjqL2g-OdFOZ2MBp7xyk2L0Mz68QPo5dc16Tsweh6Mg0c8ZUJpVUax3Z_JK1q2GdRYHG_GhJPQv6ZTt1N5roF-otIWYG6ZJsiIPILxRzEZTkasZ6Mzmi9hDXDVjBd-B2zDUMm8iU25cEVKAUwAQ',
+'token':	'b5b832d5addd48c5889ee2b35d91a13d-1222084156',
+'client_key':	'3c2cd3f3',
+'os':	'android',
+'sig':	'dccbb232021c07f0d0818e743fa72d39'
+
+}
+
+data2= {
+'user_id':	'1459796743',
+'photo_id':	'5198842848161225999',
+'cancel':	'0',
+'referer'	:'ks://photo/1459796743/5198842848161225999/3/1_i/2000073611353593250_p0#like',
+'exp_tag0'	:'',
+'exp_tag':	'1_i/2000073611353593250_p0',
+'serverExpTag':	'feed_photo|5198842848161225999|1459796743|1_i/2000073611353593250_p0',
+'expTagList':	'CkkKRGZlZWRfcGhvdG98NTE5ODg0Mjg0ODE2MTIyNTk5OXwxNDU5Nzk2NzQzfDFfaS8yMDAwMDczNjExMzUzNTkzMjUwX3AwEgEx',
+'photoinfo':	'1459796743/_',
+#'__NS_sig3'	:'2200202409c64b0b75b5fd3eebd616fa6dc8ece66b',
+
+'__NStokensig':	'b11b82e68d715f6391f241f7d9cbaa931acbb29ceac69d058f20cd4392eb3626',
+                   # "Cg9rdWFpc2hvdS5hcGkuc3QSoAHkJlS_ajLHzGDzSJPxFhQuzQADae96bRnP4uDzr__YYLvjhUhagLtUUWCHlwBeDHWEzTQH00CdeTQLal6PJIWRcDXOoxs3lMZePlE6EYLdKNJMM0HHBf6kSRNuQ3I0FrvR3zbLU24GVWKf2fNFjqL2g-OdFOZ2MBp7xyk2L0Mz68QPo5dc16Tsweh6Mg0c8ZUJpVUax3Z_JK1q2GdRYHG_GhJPQv6ZTt1N5roF-otIWYG6ZJsiIPILxRzEZTkasZ6Mzmi9hDXDVjBd-B2zDUMm8iU25cEVKAUwAQ"
+'kuaishou.api_st':	'Cg9rdWFpc2hvdS5hcGkuc3QSoAHkJlS_ajLHzGDzSJPxFhQuzQADae96bRnP4uDzr__YYLvjhUhagLtUUWCHlwBeDHWEzTQH00CdeTQLal6PJIWRcDXOoxs3lMZePlE6EYLdKNJMM0HHBf6kSRNuQ3I0FrvR3zbLU24GVWKf2fNFjqL2g-OdFOZ2MBp7xyk2L0Mz68QPo5dc16Tsweh6Mg0c8ZUJpVUax3Z_JK1q2GdRYHG_GhJPQv6ZTt1N5roF-otIWYG6ZJsiIPILxRzEZTkasZ6Mzmi9hDXDVjBd-B2zDUMm8iU25cEVKAUwAQ',
+'token':	'b5b832d5addd48c5889ee2b35d91a13d-1222084156',
+'client_key':	'3c2cd3f3',
+'os':	'android',
+'sig':	'b07d870c5447d34ff498de7d5d0ad653'
+
+}
+datas="user_id=1459796743&photo_id=5198842848161225999&cancel=0&referer=ks%3A%2F%2Fphoto%2F1459796743%2F5198842848161225999%2F3%2F1_i%2F2000071094577332082_l0%23like&exp_tag0=&exp_tag=1_i%2F2000071094577332082_l0&serverExpTag=feed_photo%7C5198842848161225999%7C1459796743%7C1_i%2F2000071094577332082_l0&expTagList=CkkKRGZlZWRfcGhvdG98NTE5ODg0Mjg0ODE2MTIyNTk5OXwxNDU5Nzk2NzQzfDFfaS8yMDAwMDcxMDk0NTc3MzMyMDgyX2wwEgEx&photoinfo=_%2F_&__NS_sig3=2200196649c63911d721ef95a0684c4fcf1a3e746f&__NStokensig=0a3e3df839f91c54988dd1d97565019603db3f0155056ef5b7189144889e0203&kuaishou.api_st=Cg9rdWFpc2hvdS5hcGkuc3QSoAGRGiDLs2ObtxL4aBSmC5xsESvNlLA4d8cwctvhpmkshRmUxakngsnjN9HJTcY41no-4BxoEpaKaHrejwiml1FBgwFAwank35y96WM49hCaFq0Nl2jiIlCJZMmJ014aMx4O59cNnMcY1_1X1hYJsgZF3wJwTEnc6BLxKcqcrrf6HHL3QiWQkT5EIBrAuvIDyy8udVSEiHrbMx5Gqhol0zpFGhJrNN-fL8lNH4AKLNFPdkh-L7kiIN6YoIUApaUb8l0NETr3rJ0n4Eveat783CsuFxo1Df6sKAUwAQ&token=b5b832d5addd48c5889ee2b35d91a13d-1222084156&client_key=3c2cd3f3&os=android&sig=9aea5fba09c4eba87b11ff4dcffd7ff0"
+req = requests.post(url=url,data=data2)
+print(req.text)
